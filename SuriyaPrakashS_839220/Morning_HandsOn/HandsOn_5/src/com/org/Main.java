@@ -19,21 +19,33 @@ public class Main {
 			case 1:
 				System.out.println("Account Number:");
 				aNo=read.nextInt();
-				System.out.println("Account :");
+				System.out.println("Account Name:");
 				aName=read.next();
-				System.out.println("Account Number:");
+				System.out.println("Account balance:");
 				aBalance=read.nextDouble();
+				try {
 				service.addAccount(aNo, aName, aBalance);
+				}catch(AccountAlreadyExistsException e) {
+					System.out.println(e.getMessage());
+				}
 				break;
 			case 2:
 				System.out.println("Account Number:");
 				aNo=read.nextInt();
+				try {
 				service.deleteAccount(aNo);
+				}catch(AccountNotFoundException e) {
+					System.out.println(e.getMessage());
+				}
 				break;
 			case 3:
 				System.out.println("Account Number:");
 				aNo=read.nextInt();
+				try {
 				service.displayAccount(aNo);
+				}catch(AccountNotFoundException e) {
+					System.out.println(e.getMessage());
+				}
 				break;
 			case 4:
 				service.displayAllAccounts();
