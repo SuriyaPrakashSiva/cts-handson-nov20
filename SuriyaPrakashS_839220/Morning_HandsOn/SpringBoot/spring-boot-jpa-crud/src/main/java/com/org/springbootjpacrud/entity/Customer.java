@@ -14,9 +14,10 @@ import javax.persistence.Table;
 public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="customer_id")
 	private int customerId;
-	private String customerName;
-	private LocalDate customerDob;
+	private String name;
+	private LocalDate dob;
 
 	public Customer() {
 		super();
@@ -26,8 +27,8 @@ public class Customer {
 	public Customer(int customerId, String customerName, LocalDate customerDob) {
 		super();
 		this.customerId = customerId;
-		this.customerName = customerName;
-		this.customerDob = customerDob;
+		this.name = customerName;
+		this.dob = customerDob;
 	}
 
 	public int getCustomerId() {
@@ -39,19 +40,19 @@ public class Customer {
 	}
 
 	public String getCustomerName() {
-		return customerName;
+		return name;
 	}
 
 	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+		this.name = customerName;
 	}
 
 	public LocalDate getCustomerDob() {
-		return customerDob;
+		return dob;
 	}
 
 	public void setCustomerDob(LocalDate customerDob) {
-		this.customerDob = customerDob;
+		this.dob = customerDob;
 	}
 
 }
