@@ -1,4 +1,4 @@
-package com.org.walletserviceapp;
+package com.org.walletserviceapp.model;
 
 public class Wallet {
 	private String name;
