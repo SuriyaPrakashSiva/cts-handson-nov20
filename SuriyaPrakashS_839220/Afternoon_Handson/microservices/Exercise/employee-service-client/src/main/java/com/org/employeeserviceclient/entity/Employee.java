@@ -1,5 +1,4 @@
-package com.org.employeeserviceclient.dao;
-
+package com.org.employeeserviceclient.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
