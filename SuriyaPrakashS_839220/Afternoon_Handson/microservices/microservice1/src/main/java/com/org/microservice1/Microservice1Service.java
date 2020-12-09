@@ -13,6 +13,7 @@ public class Microservice1Service {
 	
 	@HystrixCommand(fallbackMethod="buildFallBackForMethod1")
 	public String method1() {
+		System.out.println("method1() calling microserivce2");
 		String response=null;
 		response=restTemplate.getForObject("http://MICROSERVICE2/m2", String.class);
 		return response;
