@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.org.walletserviceapp.model.AccountStructure;
 
+//fiegn Client
 @FeignClient("http://ACCOUNTSERVICEAPP")
 public interface WalletUtil {
 	@GetMapping("/account/{accNo}")
